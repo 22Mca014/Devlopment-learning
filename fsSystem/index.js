@@ -26,7 +26,7 @@ fs.writeFile('./fsSystem/index.txt','David Mondal','UTF8',(err,data)=>{
     }
 })
 // 3.remove direcroty
-fs.rm('./fsSystem/bigB',{recursive:true,force:true},(err)=>{
+fs.rm('bigB',{recursive:true,force:true},(err)=>{
     if(err) console.log(err);
     else
     console.log("dir remove");
@@ -44,3 +44,4 @@ fs.unlink('./fsSystem/b.jpg',(error,data)=>{
     if(error) console.log(error);
     else
     console.log(data);})
+
