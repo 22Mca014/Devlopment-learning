@@ -1,6 +1,5 @@
-
-import './App.css'
-
+// App.js
+import './App.css';
 import React, { useState } from 'react';
 
 function App() {
@@ -30,10 +29,10 @@ function App() {
     }
 
     const formData = new FormData();
-    formData.append("image", selectedImage);
+    formData.append("file", selectedImage); // Ensure the key matches your server's expectation ("file")
 
     try {
-      const response = await fetch("https://your-backend-url.com/upload", {
+      const response = await fetch("http://localhost:2000/upload", {
         method: "POST",
         body: formData,
       });
